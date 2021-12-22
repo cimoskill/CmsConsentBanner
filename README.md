@@ -51,4 +51,8 @@ https://developers.google.com/tag-platform/devguides/consent#tag-manager_1
 
 
   
-  
+# TODOS
+- Improve Docs
+- Add some screenshot
+- Add some description about the layout structure
+
