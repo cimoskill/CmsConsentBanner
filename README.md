@@ -1,8 +1,11 @@
 # CmsConsentBanner
 A cookie banner with full or partial acceptance of consents and callback of the choices to use with Google Tag Manager and Google Consent.
 
-# NO DEPENDENCIES
-# Vanilla JS
+This can be a good starting point for anyone who need a solution like and to be implementable, virutally, to any CMS.
+Made from a developer to other developers.
+Please feel free to improve this project.
+
+# NO DEPENDENCIES - Vanilla JS
 
 # WHY
 I made this simple object to handle some specific needs of some customers.
@@ -28,19 +31,20 @@ Implement your custom callback function and set to the Object.
 For example we define our custom callback like:
   
 function OnUserHasMadeSomeChoiceCallback( userChoices ) {
-    // do something with userChoices
-    // for example send to google consent
-    // Note: userChoices pass value 1 for accept and 0 for not accept.
-    // Google need these values as "granted" or "denied".
-    // gtag('consent', 'update', {
-    //        ad_storage: 'granted',
-    //        analytics_storage: 'denied'
-    // });
-    // see more informations here:
-    // https://developers.google.com/tag-platform/devguides/consent#tag-manager_1
+  /*
+    do something with userChoices, for example send to google consent.
+    Note: userChoices pass value 1 for accept and 0 for not accept.
+
+    Google need these values as "granted" or "denied".
+    gtag('consent', 'update', {
+            ad_storage: 'granted',
+            analytics_storage: 'denied'
+    });
+    see more informations here:
+    https://developers.google.com/tag-platform/devguides/consent#tag-manager_1
+  */
 }
-  
-  
+
   
   
   
