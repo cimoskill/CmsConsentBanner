@@ -28,23 +28,31 @@ The banner works with 3 types of consents:
  
 # SEND USER CONSENTS VIA GOOGLE CONSENT API
 Implement your custom callback function and set to the Object.
-For example we define our custom callback like:
-  
-function OnUserHasMadeSomeChoiceCallback( userChoices ) {
-  /*
-    do something with userChoices, for example send to google consent.
-    Note: userChoices pass value 1 for accept and 0 for not accept.
 
-    Google need these values as "granted" or "denied".
+For example we define our custom callback like:
+
+/*
+function OnUserHasMadeSomeChoiceCallback( userChoices ) {
+    do something with userChoices, for example send to google consent.
+}
+*/
+
+Set the object to use your callback in 2 ways:
+  - via DOM data api:   <div id="..."  data-callback="OnUserHasMadeSomeChoiceCallback" ...>
+  - via js method CmsConsentBanner.setUserChoiceCallback( )
+
+  
+Note: userChoices pass value 1 for accept and 0 for not accept.
+
+Google need these values as "granted" or "denied".
     gtag('consent', 'update', {
             ad_storage: 'granted',
             analytics_storage: 'denied'
     });
-    see more informations here:
-    https://developers.google.com/tag-platform/devguides/consent#tag-manager_1
-  */
-}
-
   
+see more informations here:
+https://developers.google.com/tag-platform/devguides/consent#tag-manager_1
+
+
   
   
