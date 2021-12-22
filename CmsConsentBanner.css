@@ -1,0 +1,190 @@
+
+.cmsconsentbanner-main
+{
+  position: fixed;
+  bottom: 0; 
+  left: 0;
+  width: 100%;
+  height: 100%;
+  
+  z-index: 0;
+  
+  font-size: 14px;
+  
+}
+
+.cmsconsentbanner-main::before{
+    content: '';
+    position: absolute;
+    bottom: 0; 
+    left: 0;
+    width: 100%;
+    height: 100%;
+    
+    background: rgba(0,0,0,.7);
+    opacity: 0;
+    
+    transition: all 800ms ease;
+    -moz-transition: all 800ms ease;
+    -webkit-transition: all 800ms ease;
+    -o-transition: all 800ms ease;
+}
+
+.cmsconsentbanner-main .consentbanner-inner{
+    position: absolute;
+    bottom: 0; left: 0;
+    background: white;
+    width: 100%;
+    padding: 0;
+
+    transition: all 800ms ease;
+    -moz-transition: all 800ms ease;
+    -webkit-transition: all 800ms ease;
+    -o-transition: all 800ms ease;
+}
+
+
+/* both panels */
+
+
+/* buttons inside their container, shown as vertical */
+.cmsconsentbanner-main .cb-buttons-container{
+    display: flex;
+    justify-content: flex-end;
+}
+.cmsconsentbanner-main .cb-buttons-container .cb-buttons{
+    display: flex;
+    flex-direction: column;
+}
+
+.cmsconsentbanner-main .cb-buttons-container .cb-buttons > button{
+    display: block;
+    margin-bottom: 1em;
+    width: 100%;
+}
+
+
+/* inner panel settings hidden by default */
+.cmsconsentbanner-main .consentbanner-inner .consentbanner-settings{
+    display: none;
+}
+
+body.with-cmsconsentbanner-open{
+    overflow: hidden;
+}
+
+
+body.with-cmsconsentbanner-open .cmsconsentbanner-main{
+    z-index: 1999;
+}
+body.with-cmsconsentbanner-open .cmsconsentbanner-main::before{
+    opacity: 1;
+}
+
+/* primary inner panel visible by default */
+body.with-cmsconsentbanner-open .cmsconsentbanner-main .consentbanner-primary{
+    display: flex;
+    width: 100%;
+    padding: 2em;
+    justify-content: space-between;
+}
+.cmsconsentbanner-main .consentbanner-primary .cb-message > a{
+    margin-left: 1em;
+}
+
+
+body.with-cmsconsentbanner-open .cmsconsentbanner-main .consentbanner-primary .cb-message{
+    width: 85%;
+}
+
+
+/* settings panel */
+
+.cmsconsentbanner-main .consentbanner-settings{
+    display: flex; 
+    flex-direction: column;
+    padding: 2em;
+}
+
+.cmsconsentbanner-main .consentbanner-settings .cb-consent-infos-box{
+    display: flex;
+}
+.cmsconsentbanner-main .consentbanner-settings .cb-consent-infos-box > ul{
+    list-style: none;
+    padding: 0;
+}
+.cmsconsentbanner-main .consentbanner-settings .cb-consent-infos-box > ul > li > a{
+    padding: .5em 1em;
+    display: block;
+    text-decoration: none;
+}
+.cmsconsentbanner-main .consentbanner-settings .cb-consent-infos-box > ul > li.active a{
+    text-decoration: underline;
+}
+
+
+
+.cmsconsentbanner-main .cb-consent-single-desc{
+    padding: .5em 1em;
+    display: none;
+}
+.cmsconsentbanner-main .cb-consent-single-desc:first-child{
+    display: block;
+}
+
+.cmsconsentbanner-main .cb-consent-single-desc .cb-consent-title{
+    font-weight: bold;
+    margin-bottom: .5em;
+}
+
+.cmsconsentbanner-main .cb-consent-flags{
+    display: block; width: 100%;
+    text-align: center;
+}
+.cmsconsentbanner-main .cb-consent-flags label{
+    margin-right: 1em;
+}
+.cmsconsentbanner-main .cb-consent-flags label > input{
+    margin-right: .2em;
+}
+
+
+.cmsconsentbanner-main .cb-consent-details .details-contents,
+.cmsconsentbanner-main .cb-consent-details.empty{
+    display: none;
+}
+
+.cmsconsentbanner-main .cb-consent-details.expanded .details-contents{
+    display: block;
+    padding-top: 1em;
+    width: 100%;
+    height: auto;
+}
+
+
+/* banner closed with or without the revokable clickable label. we use the class ".revokable"  */
+body.with-cmsconsentbanner-closed .cmsconsentbanner-main:not(.revokable){
+    display: none;
+}
+
+body.with-cmsconsentbanner-closed .consentbanner-primary,
+body.with-cmsconsentbanner-closed .consentbanner-settings{
+    display: none;
+}
+
+body.with-cmsconsentbanner-closed .cmsconsentbanner-main.revokable{
+    z-index: 1;
+    width: auto;
+    height: auto;
+}
+
+.cmsconsentbanner-main .revokable-lbl a{
+    text-decoration: none;
+    font-size: .8em;
+    padding: .5em;
+}
+
+body.with-cmsconsentbanner-closed .cmsconsentbanner-main.revokable .consentbanner-inner{
+    position: relative;
+    padding: 0;
+}
