@@ -31,11 +31,7 @@ Implement your custom callback function and set to the Object.
 
 For example we define our custom callback like:
 
-/*
-function OnUserHasMadeSomeChoiceCallback( userChoices ) {
-    do something with userChoices, for example send to google consent.
-}
-*/
+function OnUserHasMadeSomeChoiceCallback( userChoices ) {      do something with userChoices, for example send to google consent. }
 
 Set the object to use your callback in 2 ways:
   - via DOM data api:   <div id="..."  data-callback="OnUserHasMadeSomeChoiceCallback" ...>
