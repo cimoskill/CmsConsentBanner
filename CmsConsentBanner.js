@@ -154,13 +154,13 @@ const CmsConsentBanner = {
      * @type type
      */
     texts: {
-        message: 'Navigando in questo sito si acconsente all\'utilizzo dei cookie ',
-        readmoreText: 'Leggi di più',
+        message: 'Cookies help us to give you high quality services. Using our services, the user agrees with our use of cookies. ',
+        readmoreText: 'Read more',
         readmoreLink: '/privacy.html',
-        btnOK: 'Accetta tutto',
-        btnOKSelected: 'Accetta selezionati',
-        btnSettings: 'Impostazioni',
-        btnExpand: 'Dettagli',
+        btnOK: 'Accept all',
+        btnOKSelected: 'Accept selected',
+        btnSettings: 'Settings',
+        btnExpand: 'Details',
         btnRevokable: 'Cookie Policy',
         
         detailsTable: {
