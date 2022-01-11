@@ -128,6 +128,15 @@ body.with-cmsconsentbanner-open .cmsconsentbanner-main .consentbanner-primary .c
     padding: .5em 1em;
     display: none;
 }
+
+@media all and (max-width: 768px) {
+    .cmsconsentbanner-main .cb-consent-single-desc{
+        max-height: 40vh;
+        overflow-y: scroll;
+        margin-bottom: 1em;
+    }
+}
+
 .cmsconsentbanner-main .cb-consent-single-desc:first-child{
     display: block;
 }
