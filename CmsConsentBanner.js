@@ -52,7 +52,7 @@ const CmsConsentBanner = {
     consents: {
         
         necessary: {
-            consent_name: 'necessary',
+            consent_name: 'functionality_storage',
             title: 'Necessary',
             description: 'These cookies are necessary for the normal operation of the website. No personally identifiable information is collected.',
             details: [],
