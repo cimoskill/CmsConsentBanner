@@ -61,6 +61,7 @@
     display: block;
     margin-bottom: 1em;
     width: 100%;
+    color: #222 !important;
 }
 
 
@@ -69,15 +70,16 @@
     display: none;
 }
 
-body.with-cmsconsentbanner-open{
+body.with-cmsconsentbanner-open:not(.with-cmsconsentbanner-wallblock){
     overflow: hidden;
 }
 
 
-body.with-cmsconsentbanner-open .cmsconsentbanner-main{
+body.with-cmsconsentbanner-open:not(.with-cmsconsentbanner-wallblock) .cmsconsentbanner-main{
     z-index: 1999;
 }
-body.with-cmsconsentbanner-open .cmsconsentbanner-main::before{
+
+body.with-cmsconsentbanner-open:not(.with-cmsconsentbanner-wallblock) .cmsconsentbanner-main::before{
     opacity: 1;
 }
 
@@ -94,6 +96,7 @@ body.with-cmsconsentbanner-open .cmsconsentbanner-main .consentbanner-primary{
 
 
 body.with-cmsconsentbanner-open .cmsconsentbanner-main .consentbanner-primary .cb-message{
+    text-align: justify;
     width: 85%;
 }
 
@@ -131,11 +134,12 @@ body.with-cmsconsentbanner-open .cmsconsentbanner-main .consentbanner-primary .c
 
 @media all and (max-width: 768px) {
     .cmsconsentbanner-main .cb-consent-single-desc{
-        max-height: 40vh;
+        height: 40vh;
         overflow-y: scroll;
         margin-bottom: 1em;
     }
 }
+
 
 .cmsconsentbanner-main .cb-consent-single-desc:first-child{
     display: block;
