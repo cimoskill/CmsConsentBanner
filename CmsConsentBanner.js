@@ -796,7 +796,7 @@ const CmsConsentBanner = {
         // the user has made some choice
         this.utils.setCookie(this.cookieKey, 1, this.cookieExpireDays);
         
-        const checkboxList = this.$el.querySelector('.cb-consent-flags input[type="checkbox"]');
+        const checkboxList = this.$el.querySelectorAll('.cb-consent-flags input[type="checkbox"]');
         for(let i=0; i<checkboxList.length; i++) {
             if ( checkboxList[i].checked ) {
                 let consentName = checkboxList[i].getAttribute('name');
