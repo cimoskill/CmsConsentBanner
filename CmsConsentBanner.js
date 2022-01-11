@@ -20,7 +20,7 @@ const CmsConsentBanner = {
      * default expire value in days
      * @type Number
      */
-    cookieExpireDays: 60,
+    cookieExpireDays: 365,
     
     /**
      * TRUE to show the little label after accepted the banner.
@@ -30,6 +30,11 @@ const CmsConsentBanner = {
      */
     isRevokable: true,
     
+    /**
+     * TRUE to block the page and scroll. FALSE to allow user to scroll.
+     * @type type
+     */
+    wallBlock: true,
     
     /**
      * Default list of consents that we should ask to the user via the setting panel of the banner.
@@ -154,13 +159,13 @@ const CmsConsentBanner = {
      * @type type
      */
     texts: {
-        message: 'Cookies help us to give you high quality services. Using our services, the user agrees with our use of cookies. ',
-        readmoreText: 'Read more',
+        message: 'Navigando in questo sito si acconsente all\'utilizzo dei cookie ',
+        readmoreText: 'Leggi di più',
         readmoreLink: '/privacy.html',
-        btnOK: 'Accept all',
-        btnOKSelected: 'Accept selected',
-        btnSettings: 'Settings',
-        btnExpand: 'Details',
+        btnOK: 'Accetta tutto',
+        btnOKSelected: 'Accetta selezionati',
+        btnSettings: 'Impostazioni',
+        btnExpand: 'Dettagli',
         btnRevokable: 'Cookie Policy',
         
         detailsTable: {
@@ -178,6 +183,7 @@ const CmsConsentBanner = {
     styles: {
         bannerShowOpen: 'with-cmsconsentbanner-open',
         bannerShowClosed: 'with-cmsconsentbanner-closed',
+            bannerShowWallblock: 'with-cmsconsentbanner-wallblock',
         
         btnClass: 'btn', // added to every button always
         btnOkClass: 'btn-primary', // added to specific buttons only
@@ -661,6 +667,10 @@ const CmsConsentBanner = {
         
         document.body.classList.remove(this.styles.bannerShowClosed);
         document.body.classList.add(this.styles.bannerShowOpen);
+        
+        if ( this.wallBlock ) {
+            document.body.classList.add( this.styles.bannerShowWallblock );
+        }
         
         this.$el.querySelector('.consentbanner-primary').style.display = 'block';
         this.$el.querySelector('.revokable-lbl').style.display = 'none';
