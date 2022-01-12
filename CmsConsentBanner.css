@@ -70,16 +70,16 @@
     display: none;
 }
 
-body.with-cmsconsentbanner-open:not(.with-cmsconsentbanner-wallblock){
+body.with-cmsconsentbanner-open.with-cmsconsentbanner-wallblock{
     overflow: hidden;
 }
 
 
-body.with-cmsconsentbanner-open:not(.with-cmsconsentbanner-wallblock) .cmsconsentbanner-main{
+body.with-cmsconsentbanner-open.with-cmsconsentbanner-wallblock .cmsconsentbanner-main{
     z-index: 1999;
 }
 
-body.with-cmsconsentbanner-open:not(.with-cmsconsentbanner-wallblock) .cmsconsentbanner-main::before{
+body.with-cmsconsentbanner-open.with-cmsconsentbanner-wallblock .cmsconsentbanner-main::before{
     opacity: 1;
 }
 
