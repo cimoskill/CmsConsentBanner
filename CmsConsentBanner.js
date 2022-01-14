@@ -59,21 +59,22 @@ const CmsConsentBanner = {
             editable: false
         },
         
-        ad_storage: {
-            consent_name: 'ad_storage',
+        analytics_storage: {
+            consent_name: 'analytics_storage',
             title: 'Statistics',
             description: 'These cookies are used to anonymously collect data about usage of the website. No personally identifiable information is collected.',
             details: [],
             editable: true
         },
-        
-        analytics_storage: {
-            consent_name: 'analytics_storage',
+
+        ad_storage: {
+            consent_name: 'ad_storage',
             title: 'Marketing',
-            description: 'These cookies are used to store marketing and website preferences. No personally identifiable information is collected.',
+            description: 'These cookies are used to store marketing and website preferences. Third party cookie to allow ads activities.',
             details: [],
             editable: true
         }
+        
     },
     
     
