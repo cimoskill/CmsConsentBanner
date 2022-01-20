@@ -201,3 +201,17 @@ body.with-cmsconsentbanner-closed .cmsconsentbanner-main.revokable .consentbanne
     position: relative;
     padding: 0;
 }
+
+
+@media all and (max-width: 768px) {
+	
+	#cookieconsent_custom_container .consentbanner-primary .cb-buttons-container .cb-buttons,
+	#cookieconsent_custom_container .consentbanner-settings .cb-buttons-container .cb-buttons
+	{
+		display: block;
+		width: 100%;
+		padding-top: 1em;
+	}
+
+}
+
